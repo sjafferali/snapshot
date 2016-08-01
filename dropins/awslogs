@@ -1,0 +1,8 @@
+[/opt/snapshot/logs/ps.log]
+datetime_format = %m/%d/%y %H:%M:%S
+file = /opt/snapshot/logs/ps.log
+buffer_duration = 5000
+log_stream_name = {hostname}
+initial_position = start_of_file
+log_group_name = /opt/snapshot/logs/ps.log
+multi_line_start_pattern = {datetime_format}

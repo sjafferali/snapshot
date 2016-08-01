@@ -1,0 +1,7 @@
+/opt/snapshot/logs/ps.log
+{
+    missingok
+    rotate 4
+    weekly
+    compress
+}
