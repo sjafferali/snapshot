@@ -7,17 +7,17 @@ then
 	git clone https://github.com/sjafferali/snapshot.git
 fi
 
-if [[ -e /etc/cron.d/snapshot ]]
+if [[ ! -e /etc/cron.d/snapshot ]]
 then
 	ln -s /opt/snapshot/dropins/cron /etc/cron.d/snapshot
 fi
 
-if [[ -e /etc/logrotate.d/snapshot ]]
+if [[ ! -e /etc/logrotate.d/snapshot ]]
 then
 	ln -s /opt/snapshot/dropins/logrotate /etc/logrotate.d/snapshot
 fi
 
-if [[ -e /var/awslogs/etc/config/snapshot ]]
+if [[ ! -e /var/awslogs/etc/config/snapshot ]]
 then
 	ln -s /opt/snapshot/dropins/awslogs /var/awslogs/etc/config/snapshot
 	touch /opt/snapshot/logs/ps.log
